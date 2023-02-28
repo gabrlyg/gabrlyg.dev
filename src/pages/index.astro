@@ -1,11 +1,51 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import type { SiteConfig } from '../types/types';
+
+const SITE_CONFIG: SiteConfig = {
+  title: 'Gabriel Yang | SDE',
+  social: {
+    instagram: 'https://www.instagram.com/qriousgabriel/',
+    twitter: 'https://www.twitter.com/gabrlyg',
+    github: 'https://www.github.com/gabrlyg',
+  },
+};
 ---
 
-<Layout title="Welcome to Astro.">
-	<main class="font-mono">
-		<h1 class="text-4xl font-bold">Hi, I'm Gabriel Yang.</h1>
-		<p>I am a software engineer.</p>
-	</main>
+<Layout siteConfig={SITE_CONFIG}>
+  <article class='prose py-16 mx-8 flex max-w-3xl flex-1 flex-col prose-p:my-4'>
+    <h1 class='text-3xl font-bold'>Hi, My name is Gabriel Yang.</h1>
+    <h2 class='text-xl font-semibold'>
+      Welcome to my little corner of the internet.
+    </h2>
+    <div class='flex flex-col font-light'>
+      <p>
+        I'm an SDE at Amazon, currently based in the UK <span class='text-xl'
+          >🇬🇧</span
+        >.
+      </p>
+      <p>
+        In my day job, I'm mostly building big data ingestion pipeline these
+        days. But I used to build fully accessible websites and mobile apps with
+        React/React Native before my times at Amazon.
+      </p>
+      <p>
+        Whatever it is, as long as I am building stuff, I will always find great
+        joy in it.
+      </p>
+      <p>
+        I'm always curious and eager to learn about basically anything, and
+        currently I'm learning how to get started with contributing to OSS. Hope
+        I can build something useful :-)
+      </p>
+      <p>
+        Apart from being an SDE, I am also a <a
+          href={SITE_CONFIG.social.instagram}
+          class='border-b-[1px] border-neutral-700 font-cursive text-neutral-700 transition-all hover:border-b-2 no-underline focus:ring-2'
+          >street photographer</a
+        >. And I sometimes build mechanical keyboards, althogh I'm mostly using
+        my old trusty HHKB Pro 2 these days.
+      </p>
+    </div>
+  </article>
 </Layout>

@@ -1,0 +1,20 @@
+---
+import { Instagram, Twitter, GitHub } from 'astro-feather-icons';
+import type { SocialType } from '../types/types';
+
+export interface Props {
+  type: SocialType;
+}
+
+const socialIcons = {
+  instagram: Instagram,
+  twitter: Twitter,
+  github: GitHub,
+};
+
+const { type } = Astro.props;
+
+const SocialIcon = socialIcons[type];
+---
+
+<SocialIcon class="stroke-neutral-600 hover:stroke-neutral-900 transition-colors"/>

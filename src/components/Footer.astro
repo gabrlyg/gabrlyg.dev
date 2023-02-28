@@ -1,0 +1,26 @@
+---
+import type { Social, SocialType } from '../types/types';
+import SocialIcon from './SocialIcon.astro';
+
+export interface Props {
+  social: Social;
+}
+
+const { social } = Astro.props;
+---
+
+<footer
+  class='flex flex-col items-center justify-center my-8'
+>
+  <div class='flex flex-row gap-4'>
+    {
+      Object.entries(social).map(([type, url]) => {
+        return (
+          <a href={url}>
+            <SocialIcon type={type as SocialType} />
+          </a>
+        );
+      })
+    }
+  </div>
+</footer>
