@@ -4,11 +4,11 @@ import { Sun, Moon } from 'astro-feather-icons';
 
 <header class='flex w-full flex-row items-center justify-end p-4'>
   <button
-    class='self-end p-2 focus:outline-dashed focus:outline-2'
+    class='group self-end p-2 focus:outline-dashed focus:outline-2'
     id='btn-toggle-theme'
     title='Toggle dark & light mode'
   >
-    <Sun class='dark:block hidden' />
-    <Moon class='dark:hidden block' />
+    <Sun class='dark:block hidden group-hover:rotate-12' />
+    <Moon class='dark:hidden block group-hover:rotate-12' />
   </button>
 </header>

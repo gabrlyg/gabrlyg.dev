@@ -14,7 +14,7 @@ const { social } = Astro.props;
     {
       Object.entries(social).map(([type, url]) => {
         return (
-          <a href={url} class='p-2 focus:outline-dashed focus:outline-2'>
+          <a href={url} class='group p-2 focus:outline-dashed focus:outline-2'>
             <SocialIcon type={type as SocialType} />
           </a>
         );
