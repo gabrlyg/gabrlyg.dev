@@ -5,11 +5,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        mono: ['"JetBrains Mono"'],
+        mono: ['"JetBrains Mono"', 'mono'],
         cursive: ['"Tillana"', 'cursive'],
       },
     },
   },
   plugins: [require('@tailwindcss/typography')],
-  darkMode: 'class',
+  darkMode: ['class'],
 };

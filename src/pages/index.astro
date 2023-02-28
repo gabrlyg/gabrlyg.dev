@@ -13,7 +13,9 @@ const SITE_CONFIG: SiteConfig = {
 ---
 
 <Layout siteConfig={SITE_CONFIG}>
-  <article class='prose py-16 mx-8 flex max-w-3xl flex-1 flex-col prose-p:my-4'>
+  <article
+    class='prose mx-8 flex max-w-3xl flex-1 flex-col pt-4 pb-8 dark:prose-invert prose-p:my-4'
+  >
     <h1 class='text-3xl font-bold'>Hi, My name is Gabriel Yang.</h1>
     <h2 class='text-xl font-semibold'>
       Welcome to my little corner of the internet.
@@ -41,8 +43,9 @@ const SITE_CONFIG: SiteConfig = {
       <p>
         Apart from being an SDE, I am also a <a
           href={SITE_CONFIG.social.instagram}
-          class='border-b-[1px] border-neutral-700 font-cursive text-neutral-700 transition-all hover:border-b-2 no-underline focus:ring-2'
-          >street photographer</a
+          class='border-b-[1px] border-slate-800 font-cursive no-underline transition-all hover:border-b-2 focus:outline-dashed focus:outline-2 focus:outline-offset-2 dark:border-neutral-50'
+        >
+          street photographer</a
         >. And I sometimes build mechanical keyboards, althogh I'm mostly using
         my old trusty HHKB Pro 2 these days.
       </p>
