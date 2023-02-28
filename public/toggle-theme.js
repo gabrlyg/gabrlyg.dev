@@ -9,8 +9,9 @@ const setThemePreference = (theme) => {
 
 let currentTheme = getThemePreference();
 
-const toggleTheme = () => {
+const toggleTheme = (event) => {
   currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  event.target.setAttribute('aria-label', currentTheme);
 };
 
 const reflectThemePreference = (theme) => {
@@ -22,9 +23,11 @@ const reflectThemePreference = (theme) => {
 reflectThemePreference(currentTheme);
 
 window.onload = () => {
-  document.querySelector('#btn-toggle-theme').addEventListener('click', () => {
-    toggleTheme();
-    setThemePreference(currentTheme);
-    reflectThemePreference(currentTheme);
-  });
+  document
+    .querySelector('#btn-toggle-theme')
+    .addEventListener('click', (event) => {
+      toggleTheme(event);
+      setThemePreference(currentTheme);
+      reflectThemePreference(currentTheme);
+    });
 };
