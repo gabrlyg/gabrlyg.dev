@@ -1,5 +1,5 @@
 ---
-import { Sun, Moon } from 'astro-feather-icons';
+import { SunIcon, MoonIcon } from 'astro-feather';
 ---
 
 <header class='flex min-w-full flex-row items-center justify-center p-4'>
@@ -9,8 +9,8 @@ import { Sun, Moon } from 'astro-feather-icons';
       id='btn-toggle-theme'
       title='Toggle dark & light mode'
     >
-      <Sun class='dark:block hidden group-hover:rotate-12' title='' />
-      <Moon class='dark:hidden block group-hover:rotate-12' title='' />
+      <SunIcon customClasses='dark:block hidden group-hover:rotate-12' />
+      <MoonIcon customClasses='dark:hidden block group-hover:rotate-12' />
     </button>
   </div>
 </header>

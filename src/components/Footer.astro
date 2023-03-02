@@ -17,6 +17,7 @@ const { social } = Astro.props;
           <a
             href={url}
             class='group p-2 focus:outline-dashed focus:outline-2 focus:outline-slate-700 dark:focus:outline-slate-50'
+            aria-label={type}
           >
             <SocialIcon type={type as SocialType} />
           </a>

@@ -1,5 +1,5 @@
 ---
-import { Instagram, Twitter, GitHub } from 'astro-feather-icons';
+import {InstagramIcon, GithubIcon, TwitterIcon} from 'astro-feather' 
 import type { SocialType } from '../types/types';
 
 export interface Props {
@@ -7,9 +7,9 @@ export interface Props {
 }
 
 const socialIcons = {
-  instagram: Instagram,
-  twitter: Twitter,
-  github: GitHub,
+  instagram: InstagramIcon,
+  twitter: TwitterIcon,
+  github: GithubIcon,
 };
 
 const { type } = Astro.props;
@@ -17,4 +17,4 @@ const { type } = Astro.props;
 const SocialIcon = socialIcons[type];
 ---
 
-<SocialIcon class='transition-colors group-hover:rotate-12' />
+<SocialIcon customClasses='group-hover:rotate-12' />
